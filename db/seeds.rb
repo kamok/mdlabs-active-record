@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 5.times do |i|
-	Hospital.create(hospital_name: "Hospital#{i}", 
-									hospital_address: "some_hospital_address#{i}")
+	Hospital.create(hospital_name: "Hospital#{i+1}", 
+									hospital_address: "some_hospital_address#{i+1}")
 end
