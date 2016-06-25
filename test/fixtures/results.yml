@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  result_value: 1
+  reported_at: 2016-06-24 22:01:56
+
+two:
+  result_value: 1
+  reported_at: 2016-06-24 22:01:56

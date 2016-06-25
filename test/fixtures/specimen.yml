@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sample_name: MyString
+  date_received: 2016-06-24
+  sample_type: MyString
+
+two:
+  sample_name: MyString
+  date_received: 2016-06-24
+  sample_type: MyString
