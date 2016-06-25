@@ -11,13 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625014820) do
+ActiveRecord::Schema.define(version: 20160625020156) do
+
+  create_table "analytes", force: :cascade do |t|
+    t.string   "analyte_name"
+    t.string   "result_range"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "hospitals", force: :cascade do |t|
     t.string   "hospital_name"
     t.string   "hospital_address"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string   "patient_name"
+    t.string   "patient_address"
+    t.string   "patient_phone_number"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "physicians", force: :cascade do |t|
+    t.string   "physician_name"
+    t.string   "physician_phone_number"
+    t.string   "physician_type"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.integer  "result_value"
+    t.datetime "reported_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "specimen", force: :cascade do |t|
+    t.string   "sample_name"
+    t.date     "date_received"
+    t.string   "sample_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
