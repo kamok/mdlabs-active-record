@@ -7,8 +7,7 @@ class Physician < ActiveRecord::Base
 
 	def self.results_analytes(physician_id)
 		results_of_q1_2014 = 
-		Physician.where(id: physician_id).map(&:results).first
-		.where(reported_at: Time.new(2014,06).beginning_of_quarter..Time.new(2014,06).end_of_quarter)
+		Physician.where(id: physician_id).map(&:results).first.q1_2014
 		
 		Analyte.where(id: results_of_q1_2014).pluck(:analyte_name)
 	end
