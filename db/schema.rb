@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160626010646) do
+ActiveRecord::Schema.define(version: 20160626053604) do
 
   create_table "analytes", force: :cascade do |t|
     t.string   "analyte_name"
@@ -54,7 +54,12 @@ ActiveRecord::Schema.define(version: 20160626010646) do
     t.datetime "reported_at"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "speciman_id"
+    t.integer  "analyte_id"
   end
+
+  add_index "results", ["analyte_id"], name: "index_results_on_analyte_id"
+  add_index "results", ["speciman_id"], name: "index_results_on_speciman_id"
 
   create_table "specimen", force: :cascade do |t|
     t.string   "sample_name"
