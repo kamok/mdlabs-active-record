@@ -16,11 +16,18 @@ end
 
 ###PATIENT
 
-10.times do |i|
+5.times do |i|
 	Patient.create(patient_name: "Patient#{i+1}",
-								 patient_address: "some_patient_address#{i+1}",
+								 patient_address: "patient_#{i+1}_address 775",
 								 patient_phone_number: "123-456-7890",
-								 physician_id: (i*0.5).round)
+								 physician_id: 1)
+end
+
+5.times do |i|
+	Patient.create(patient_name: "Patient#{i+6}",
+								 patient_address: "patient_#{i+6}_address 776",
+								 patient_phone_number: "123-456-7890",
+								 physician_id: 2)
 end
 
 ###SPECIMAN
@@ -38,7 +45,7 @@ end
 									date_received: Time.now,
 									sample_type: "Blood",
 									physician_id: 2,
-									patient_id: i+1)
+									patient_id: i+6)
 end
 
 ###ANALYTE
