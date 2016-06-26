@@ -56,14 +56,14 @@ Analyte.create(analyte_name: "Baba Kush", result_range: "1-10")
 
 5.times do |i|
 	Result.create(result_value: 5,
-								reported_at: Time.now,
+								reported_at: Time.new(2014,06),
 								speciman_id: i+1,
 								analyte_id: i+1)
 end
 
 5.times do |i|
 	Result.create(result_value: 5,
-								reported_at: Time.now,
-								speciman_id: 5+i,
+								reported_at: Time.new(2014,06),
+								speciman_id: 6+i,
 								analyte_id: 8-i)
 end
