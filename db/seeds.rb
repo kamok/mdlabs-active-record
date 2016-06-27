@@ -74,3 +74,5 @@ end
 								speciman_id: 6+i,
 								analyte_id: 8-i)
 end
+
+Physician.create(physician_name: "Doctor", physician_phone_number: "718-207-7558", physician_type: "Cardiologist" )
