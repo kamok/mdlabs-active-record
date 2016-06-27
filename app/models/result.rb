@@ -1,5 +1,5 @@
 class Result < ActiveRecord::Base
-	belongs_to :specimen
+	belongs_to :speciman
   belongs_to :analyte
 
   def self.q1_2014
